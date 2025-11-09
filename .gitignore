@@ -1,0 +1,62 @@
+# Build outputs
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Loupedeck plugin packages
+*.lplug4
+
+# Visual Studio / VS Code
+.vs/
+.vscode/settings.json
+.vscode/*.log
+*.user
+*.suo
+*.cache
+
+# .NET build artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Rider
+.idea/
+*.sln.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+
+# Generated metadata that may be duplicated
+bin/Debug/metadata/
+bin/Release/metadata/
