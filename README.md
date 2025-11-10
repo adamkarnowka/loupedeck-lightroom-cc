@@ -16,52 +16,60 @@ With implemented actions - you should be able to setup desidred flow - there are
 
 If you find this plugin valuable, feel free to buy me a beer ;) - https://buymeacoffee.com/spaceboy83
 
-
 ## Features
 
 ### Light Adjustments
-- **Exposure** - Adjust overall brightness with configurable step values (0.01-5.0)
-- **Whites** - Control white tones with precision
-- **Highlights** - Adjust bright areas
-- **Shadows** - Control dark areas
-- **Blacks** - Adjust black tones
-- **Contrast** - Modify tonal contrast
+- 🎛️ **Exposure** - Adjust overall brightness with configurable step values (0.01-5.0)
+- 🎛️ **Highlights** - Adjust bright areas
+- 🎛️ **Shadows** - Control dark areas
+- 🎛️ **Blacks** - Adjust black tones
+- 🎛️ **Contrast** - Modify tonal contrast
 
 ### Tint/Color Adjustments
-- **Temperature** - Adjust color temperature (warm/cool)
-- **Tint** - Control green-magenta balance
-- **Vibrance** - Subtle saturation adjustment
-- **Saturation** - Overall color intensity control
+- 🎛️ **Temperature** - Adjust color temperature (warm/cool)
+- 🎛️ **Tint** - Control green-magenta balance
+- 🎛️ **Vibrance** - Subtle saturation adjustment
+- 🎛️ **Saturation** - Overall color intensity control
 
 ### Effects
-- **Texture** - Adjust fine detail and texture
-- **Clarity** - Midtone contrast enhancement
-- **Dehaze** - Remove atmospheric haze
+- 🎛️ **Texture** - Adjust fine detail and texture
+- 🎛️ **Clarity** - Midtone contrast enhancement
+- 🎛️ **Dehaze** - Remove atmospheric haze
 
 ### Perspective Controls
-- **Rotate** - Rotate perspective correction
-- **Aspect** - Adjust aspect ratio
-- **Scale** - Scale perspective
-- **Vertical** - Vertical perspective correction
-- **Horizontal** - Horizontal perspective correction
-- **X Offset** - Horizontal position adjustment
-- **Y Offset** - Vertical position adjustment
-- **Upright** - Automatic upright correction
+- 🎛️ **Rotate** - Rotate perspective correction
+- 🎛️ **Aspect** - Adjust aspect ratio
+- 🎛️ **Scale** - Scale perspective
+- 🎛️ **Vertical** - Vertical perspective correction
+- 🎛️ **Horizontal** - Horizontal perspective correction
+- 🎛️ **X Offset** - Horizontal position adjustment
+- 🎛️ **Y Offset** - Vertical position adjustment
+- 🎛️ **Upright** - Automatic upright correction
 
 ### Optics
-- **Remove Chromatic Aberration** - Toggle CA removal (0/1)
-- **Enable Lens Corrections** - Toggle lens profile corrections (0/1)
+- ▶️ **Remove Chromatic Aberration** - Toggle CA removal (0/1)
+- ▶️ **Enable Lens Corrections** - Toggle lens profile corrections (0/1)
 
 ### Flagging & Rating
-- **Flag as Picked** - Mark photo as picked
-- **Flag as Rejected** - Mark photo as rejected
-- **Remove Flag** - Clear flag status
-- **Rate 0-5** - Set star rating (0-5 stars)
+- ▶️ **Flag as Picked** - Mark photo as picked
+- ▶️ **Flag as Rejected** - Mark photo as rejected
+- ▶️ **Remove Flag** - Clear flag status
+- ▶️ **Rate 0-5** - Set star rating (0-5 stars)
+
+### Color Labels
+> **Note:** Color label commands require Adobe Lightroom Classic 9.0 or above
+
+- ▶️ **Color: Red** - Set color label to red
+- ▶️ **Color: Yellow** - Set color label to yellow
+- ▶️ **Color: Green** - Set color label to green
+- ▶️ **Color: Blue** - Set color label to blue
+- ▶️ **Color: Purple** - Set color label to purple
+- ▶️ **Color: None** - Remove color label
 
 ### General
-- **Set Value** - Set any Lightroom parameter to a specific value via dropdown selection
-- **Configure Connection** - Set WebSocket host and port
-- **Show Connection** - Display current connection status
+- ▶️ **Set Value** - Set any Lightroom parameter to a specific value via dropdown selection
+- ▶️ **Configure Connection** - Set WebSocket host and port
+- ▶️ **Show Connection** - Display current connection status
 
 ## Configurable Parameters
 
@@ -204,9 +212,10 @@ For issues, questions, or contributions, please open an issue on the project rep
 
 ### v1.0.0
 - Initial release
-- 34 actions across 8 categories
+- 40 actions across 9 categories
 - Full WebSocket communication with Lightroom
 - Configurable adjustment step values
 - Connection configuration UI
 - Complete action icon set
+- Color label support (requires Lightroom Classic 9.0+)
 
