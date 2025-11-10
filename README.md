@@ -1,6 +1,21 @@
 # Lightroom Loupedeck Plugin
 
 A comprehensive Loupedeck plugin for Adobe Lightroom that provides direct control over photo adjustments, ratings, and workflow operations via WebSocket communication.
+I did this mostly for personal purposes, decided to share - maybe someone will find it useful.
+
+⚠️ I have tested it on Mac only, don't have option to try it using Windows - if you manage to make it work there, please let me know.
+
+## Requirements:
+Adobe Lightroom installed, with `Enable external controllers` setting enabled:
+
+![Enable External Controllers in Lightroom](docs/images/lightroom-enable-external-controllers.png)
+
+After installing, there is a default profile with buttons and knobs assigned to actions, with some icons and labels.
+However, I feel that workflow is personal choice, so this is my favourite setup - for you it will probably be different so feel free to rearange.
+With implemented actions - you should be able to setup desidred flow - there are adjustments with configurable step (for micro movements). Setting value allows you to create shortcuts to reset values or setting at some desired level. There is not so many colorgrading options yet, but they will be added over time. 
+
+If you find this plugin valuable, feel free to buy me a beer ;) - https://buymeacoffee.com/spaceboy83
+
 
 ## Features
 
@@ -137,24 +152,6 @@ cd bin/Release
 # The .lplug4 file is automatically created in the bin directory
 ```
 
-## Configuration
-
-### First-Time Setup
-
-1. **Enable Lightroom External Controller**:
-   - Open Adobe Lightroom Classic
-   - The External Controller API should be enabled by default on port 7682
-
-2. **Configure Plugin Connection** (if not using defaults):
-   - Add the "Configure Connection" command to a Loupedeck button
-   - Press the button and configure:
-     - Host: `127.0.0.1` (or Lightroom's IP if on another machine)
-     - Port: `7682` (Lightroom's default port)
-
-3. **Verify Connection**:
-   - Add the "Show Connection" command to a button
-   - Press to see current connection status and host:port
-
 ### Adding Actions to Loupedeck
 
 1. Open Loupedeck software
@@ -170,64 +167,6 @@ For each adjustment action (exposure, whites, etc.):
 1. Add the action to a dial
 2. Configure the step value via the slider (0.01-5.0)
 3. The action name will update to show the current step value
-
-## Project Structure
-
-```
-LightroomPlugin/
-├── src/
-│   ├── Actions/
-│   │   ├── Effects/          # Texture, Clarity, Dehaze
-│   │   ├── General/          # Set Value command
-│   │   ├── Light/            # Exposure, Whites, Highlights, Shadows, Blacks, Contrast
-│   │   ├── Optics/           # Chromatic Aberration, Lens Corrections
-│   │   ├── Perspective/      # All perspective adjustments
-│   │   ├── Rating/           # Flagging and star rating commands
-│   │   ├── Settings/         # Connection configuration
-│   │   ├── Tint/             # Temperature, Tint, Vibrance, Saturation
-│   │   └── Transform/        # Upright command
-│   ├── Helpers/
-│   │   ├── LightroomWebSocketClient.cs  # WebSocket communication
-│   │   ├── PluginLog.cs                  # Logging utilities
-│   │   └── PluginResources.cs            # Resource management
-│   ├── package/
-│   │   ├── actionicons/      # Action icons (SVG)
-│   │   ├── actionsymbols/    # Action symbols (SVG)
-│   │   └── metadata/         # Plugin metadata and icon
-│   ├── LightroomApplication.cs
-│   ├── LightroomPlugin.cs
-│   └── LightroomPlugin.csproj
-└── README.md
-```
-
-## Troubleshooting
-
-### Plugin Not Appearing in Loupedeck
-
-1. Restart Loupedeck software completely
-2. Check that the plugin link exists in the Plugins folder
-3. Rebuild and reinstall the plugin
-
-### Connection Issues
-
-1. Verify Lightroom is running
-2. Check connection settings via "Show Connection" command
-3. Ensure Lightroom's External Controller is enabled
-4. Try reconfiguring connection with "Configure Connection"
-5. Check firewall settings if connecting to remote machine
-
-### Actions Not Working
-
-1. Verify WebSocket connection is established (check logs)
-2. Ensure you're in Develop module in Lightroom
-3. Check that a photo is selected
-4. Review Loupedeck plugin logs for errors
-
-### Viewing Logs
-
-Logs are written to the Loupedeck plugin service logs:
-- **macOS**: Check Console.app and filter for "Loupedeck" or "Lightroom"
-- **Windows**: Check Event Viewer or Loupedeck application logs
 
 ## Development
 
