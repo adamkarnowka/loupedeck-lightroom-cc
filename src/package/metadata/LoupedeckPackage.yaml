@@ -3,7 +3,7 @@ name: Lightroom
 displayName: Lightroom CC
 description: Add a short description of the plugin here.
 pluginFileName: LightroomPlugin.dll
-version: 1.0
+version: 1.1
 author: Adam Karnowka
 copyright: Copyright © 2025 Albedo Software Adam Karnowka. 
 pluginFolderMac: bin

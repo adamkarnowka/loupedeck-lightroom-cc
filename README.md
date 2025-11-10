@@ -3,6 +3,10 @@
 A comprehensive Loupedeck plugin for Adobe Lightroom that provides direct control over photo adjustments, ratings, and workflow operations via WebSocket communication.
 I did this mostly for personal purposes, decided to share - maybe someone will find it useful.
 
+📢 This plugin is for Adobe Lightroom CC - not Lightroom Classic or any other version!
+
+![Supported Lightroom Version](docs/images/lightroom-version-support.png)
+
 ⚠️ I have tested it on Mac only, don't have option to try it using Windows - if you manage to make it work there, please let me know.
 
 ## Requirements:
@@ -57,7 +61,7 @@ If you find this plugin valuable, feel free to buy me a beer ;) - https://buymea
 - ▶️ **Rate 0-5** - Set star rating (0-5 stars)
 
 ### Color Labels
-> **Note:** Color label commands require Adobe Lightroom Classic 9.0 or above
+> **Note:** Color label commands require Adobe Lightroom CC 9.0 or above
 
 - ▶️ **Color: Red** - Set color label to red
 - ▶️ **Color: Yellow** - Set color label to yellow
@@ -88,7 +92,7 @@ All knob-based adjustments support configurable step values:
 ## Requirements
 
 - **Loupedeck Device**: Loupedeck Live, Loupedeck CT, or Loupedeck +
-- **Adobe Lightroom Classic**: With External Controller API enabled
+- **Adobe Lightroom CC**: With External Controller API enabled
 - **.NET SDK**: Version 8.0 or later (for building)
 - **Operating System**: Windows or macOS
 
@@ -201,7 +205,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - Built using the Loupedeck Plugin SDK
-- Communicates with Adobe Lightroom Classic via External Controller API
+- Communicates with Adobe Lightroom CC via External Controller API
 - Icon design follows Loupedeck guidelines for optimal visibility
 
 ## Support
@@ -217,5 +221,5 @@ For issues, questions, or contributions, please open an issue on the project rep
 - Configurable adjustment step values
 - Connection configuration UI
 - Complete action icon set
-- Color label support (requires Lightroom Classic 9.0+)
+- Color label support (requires Lightroom CC 9.0+)
 
