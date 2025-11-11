@@ -49,6 +49,10 @@ namespace Loupedeck.LightroomPlugin
                 e.AddItem("Clarity2012", "Effects: Clarity", "Adjust midtone contrast");
                 e.AddItem("Dehaze", "Effects: Dehaze", "Remove atmospheric haze");
                 
+                e.AddItem("LuminanceSmoothing", "Detail: Luminance Smoothing", "Reduce luminance noise");
+                e.AddItem("ColorNoiseReduction", "Detail: Color Noise Reduction", "Remove color noise");
+                e.AddItem("Sharpness", "Detail: Sharpness", "Adjust image sharpness");
+                
                 e.AddItem("PerspectiveRotate", "Perspective: Rotate", "Rotate perspective");
                 e.AddItem("PerspectiveAspect", "Perspective: Aspect", "Adjust aspect ratio");
                 e.AddItem("PerspectiveScale", "Perspective: Scale", "Scale perspective");

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" fill="#1E1E1E"/>
+  
+  <path d="M 48 145 L 48 110 L 80 78 L 80 110 L 112 110 L 112 78 L 144 110 L 144 145 L 112 145 L 112 178 L 80 145 Z" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="miter"/>
+  
+  <line x1="166" y1="88" x2="192" y2="88" stroke="#FFFFFF" stroke-width="6"/>
+  <line x1="179" y1="75" x2="179" y2="101" stroke="#FFFFFF" stroke-width="6"/>
+  
+  <line x1="166" y1="168" x2="192" y2="168" stroke="#FFFFFF" stroke-width="6"/>
+  <line x1="179" y1="155" x2="179" y2="181" stroke="#FFFFFF" stroke-width="6"/>
+</svg>
+

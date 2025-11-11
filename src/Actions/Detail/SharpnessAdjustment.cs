@@ -5,16 +5,16 @@ namespace Loupedeck.LightroomPlugin
     using System.Threading.Tasks;
 
 
-    public class TintAdjustment : ActionEditorAdjustment
+    public class SharpnessAdjustment : ActionEditorAdjustment
     {
         private const String StepControlName = "StepValue";
 
-        public TintAdjustment() : base(hasReset: false)
+        public SharpnessAdjustment() : base(hasReset: false)
         {
-            this.GroupName = "Tint";
-            this.Name = "TintAdjustment";
-            this.DisplayName = "Tint: Tint";
-            this.Description = "Adjust tint with knob rotation";
+            this.GroupName = "Detail";
+            this.Name = "SharpnessAdjustment";
+            this.DisplayName = "Detail: Sharpness";
+            this.Description = "Adjust sharpness with knob rotation";
 
             this.ActionEditor.AddControlEx(
                 new ActionEditorSlider(name: StepControlName, labelText: "Step Value:", description: "Adjustment step size")
@@ -30,7 +30,7 @@ namespace Loupedeck.LightroomPlugin
                 var controlValue = e.ActionEditorState.GetControlValue(StepControlName);
                 if (Double.TryParse(controlValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var stepValue))
                 {
-                    e.ActionEditorState.SetDisplayName($"Tint: Tint (Step: {stepValue:F2})");
+                    e.ActionEditorState.SetDisplayName($"Detail: Sharpness (Step: {stepValue:F2})");
                 }
             }
         }
@@ -50,21 +50,21 @@ namespace Loupedeck.LightroomPlugin
             {
                 for (int i = 0; i < diff; i++)
                 {
-                    SendTintRequest("increment", stepValue);
+                    SendSharpnessRequest("increment", stepValue);
                 }
             }
             else if (diff < 0)
             {
                 for (int i = 0; i < Math.Abs(diff); i++)
                 {
-                    SendTintRequest("decrement", stepValue);
+                    SendSharpnessRequest("decrement", stepValue);
                 }
             }
 
             return true;
         }
 
-        private void SendTintRequest(String action, Double stepValue)
+        private void SendSharpnessRequest(String action, Double stepValue)
         {
             Task.Run(async () =>
             {
@@ -72,16 +72,16 @@ namespace Loupedeck.LightroomPlugin
                 {
                     if (action == "increment")
                     {
-                        await LightroomPlugin.WebSocketClient.IncrementParameterAsync("Tint", stepValue);
+                        await LightroomPlugin.WebSocketClient.IncrementParameterAsync("Sharpness", stepValue);
                     }
                     else if (action == "decrement")
                     {
-                        await LightroomPlugin.WebSocketClient.DecrementParameterAsync("Tint", stepValue);
+                        await LightroomPlugin.WebSocketClient.DecrementParameterAsync("Sharpness", stepValue);
                     }
                 }
                 catch (Exception ex)
                 {
-                    PluginLog.Error($"Error sending tint {action} request: {ex.Message}");
+                    PluginLog.Error($"Error sending sharpness {action} request: {ex.Message}");
                 }
             });
         }

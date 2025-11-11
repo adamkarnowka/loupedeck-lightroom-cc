@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 15 45 L 15 35 L 25 25 L 25 35 L 35 35 L 35 25 L 45 35 L 45 45 L 35 45 L 35 55 L 25 45 Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter"/>
+  
+  <line x1="52" y1="28" x2="60" y2="28" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="56" y1="24" x2="56" y2="32" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <line x1="52" y1="52" x2="60" y2="52" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="56" y1="48" x2="56" y2="56" stroke="#FFFFFF" stroke-width="2"/>
+</svg>
+

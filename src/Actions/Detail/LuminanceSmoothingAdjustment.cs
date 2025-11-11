@@ -5,16 +5,16 @@ namespace Loupedeck.LightroomPlugin
     using System.Threading.Tasks;
 
 
-    public class TintAdjustment : ActionEditorAdjustment
+    public class LuminanceSmoothingAdjustment : ActionEditorAdjustment
     {
         private const String StepControlName = "StepValue";
 
-        public TintAdjustment() : base(hasReset: false)
+        public LuminanceSmoothingAdjustment() : base(hasReset: false)
         {
-            this.GroupName = "Tint";
-            this.Name = "TintAdjustment";
-            this.DisplayName = "Tint: Tint";
-            this.Description = "Adjust tint with knob rotation";
+            this.GroupName = "Detail";
+            this.Name = "LuminanceSmoothingAdjustment";
+            this.DisplayName = "Detail: Luminance Smoothing";
+            this.Description = "Adjust luminance noise reduction smoothing with knob rotation";
 
             this.ActionEditor.AddControlEx(
                 new ActionEditorSlider(name: StepControlName, labelText: "Step Value:", description: "Adjustment step size")
@@ -30,7 +30,7 @@ namespace Loupedeck.LightroomPlugin
                 var controlValue = e.ActionEditorState.GetControlValue(StepControlName);
                 if (Double.TryParse(controlValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var stepValue))
                 {
-                    e.ActionEditorState.SetDisplayName($"Tint: Tint (Step: {stepValue:F2})");
+                    e.ActionEditorState.SetDisplayName($"Detail: Luminance Smoothing (Step: {stepValue:F2})");
                 }
             }
         }
@@ -50,21 +50,21 @@ namespace Loupedeck.LightroomPlugin
             {
                 for (int i = 0; i < diff; i++)
                 {
-                    SendTintRequest("increment", stepValue);
+                    SendLuminanceSmoothingRequest("increment", stepValue);
                 }
             }
             else if (diff < 0)
             {
                 for (int i = 0; i < Math.Abs(diff); i++)
                 {
-                    SendTintRequest("decrement", stepValue);
+                    SendLuminanceSmoothingRequest("decrement", stepValue);
                 }
             }
 
             return true;
         }
 
-        private void SendTintRequest(String action, Double stepValue)
+        private void SendLuminanceSmoothingRequest(String action, Double stepValue)
         {
             Task.Run(async () =>
             {
@@ -72,16 +72,16 @@ namespace Loupedeck.LightroomPlugin
                 {
                     if (action == "increment")
                     {
-                        await LightroomPlugin.WebSocketClient.IncrementParameterAsync("Tint", stepValue);
+                        await LightroomPlugin.WebSocketClient.IncrementParameterAsync("LuminanceSmoothing", stepValue);
                     }
                     else if (action == "decrement")
                     {
-                        await LightroomPlugin.WebSocketClient.DecrementParameterAsync("Tint", stepValue);
+                        await LightroomPlugin.WebSocketClient.DecrementParameterAsync("LuminanceSmoothing", stepValue);
                     }
                 }
                 catch (Exception ex)
                 {
-                    PluginLog.Error($"Error sending tint {action} request: {ex.Message}");
+                    PluginLog.Error($"Error sending luminance smoothing {action} request: {ex.Message}");
                 }
             });
         }

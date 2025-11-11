@@ -49,6 +49,11 @@ If you find this plugin valuable, feel free to buy me a beer ;) - https://buymea
 - 🎛️ **Clarity** - Midtone contrast enhancement
 - 🎛️ **Dehaze** - Remove atmospheric haze
 
+### Detail
+- 🎛️ **Luminance Smoothing** - Reduce luminance noise with smoothing
+- 🎛️ **Color Noise Reduction** - Remove color noise from images
+- 🎛️ **Sharpness** - Adjust image sharpness and detail enhancement
+
 ### Perspective Controls
 - 🎛️ **Rotate** - Rotate perspective correction
 - 🎛️ **Aspect** - Adjust aspect ratio
@@ -87,6 +92,9 @@ If you find this plugin valuable, feel free to buy me a beer ;) - https://buymea
 
 ### General
 - ▶️ **Set Value** - Set any Lightroom parameter to a specific value via dropdown selection
+- ▶️ **Reset All Adjustments** - Reset all develop adjustments to default values
+- ▶️ **Copy Edit Settings** - Copy edit settings from current photo to clipboard
+- ▶️ **Paste Edit Settings** - Paste edit settings to current photo (only enabled when settings are copied)
 - ▶️ **Configure Connection** - Set WebSocket host and port
 - ▶️ **Show Connection** - Display current connection status
 
@@ -228,6 +236,16 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For issues, questions, or contributions, please open an issue on the project repository.
 
 ## Version History
+
+### v1.3.0
+- **New Feature**: Detail adjustments group with 3 new controls (Luminance Smoothing, Color Noise Reduction, Sharpness)
+- **New Feature**: Reset All Adjustments command for quick reset to defaults
+- **New Feature**: Copy/Paste Edit Settings commands with intelligent state management
+- Enhanced Set Value command with Detail parameters
+- Improved slider consistency - removed SetFormatString from all adjustments
+- Paste button shows real-time availability based on copy status
+- Automatic status checking every 2 seconds for paste availability
+- Immediate button state update after copy operation
 
 ### v1.2.0
 - **New Feature**: Apply Preset command with dropdown selection

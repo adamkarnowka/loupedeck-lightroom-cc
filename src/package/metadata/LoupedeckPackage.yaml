@@ -3,7 +3,7 @@ name: Lightroom
 displayName: Lightroom CC
 description: Comprehensive Lightroom CC plugin with adjustments, presets, ratings, and workflow controls via WebSocket.
 pluginFileName: LightroomPlugin.dll
-version: 1.2.0
+version: 1.3.0
 author: Adam Karnowka
 copyright: Copyright © 2025 Albedo Software Adam Karnowka. 
 pluginFolderMac: bin

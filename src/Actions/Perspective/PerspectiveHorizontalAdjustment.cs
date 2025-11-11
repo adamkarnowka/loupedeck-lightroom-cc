@@ -17,8 +17,7 @@ namespace Loupedeck.LightroomPlugin
 
             this.ActionEditor.AddControlEx(
                 new ActionEditorSlider(name: StepControlName, labelText: "Step Value:", description: "Adjustment step size")
-                    .SetValues(minimumValue: 0.01, maximumValue: 5.0, defaultValue: 0.1, step: 0.01)
-                    .SetFormatString("{0:F2}"));
+                    .SetValues(minimumValue: 0.01, maximumValue: 5.0, defaultValue: 0.1, step: 0.01));
 
             this.ActionEditor.ControlValueChanged += this.OnControlValueChanged;
         }
