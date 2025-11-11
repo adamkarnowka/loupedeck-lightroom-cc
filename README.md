@@ -70,6 +70,12 @@ If you find this plugin valuable, feel free to buy me a beer ;) - https://buymea
 - ▶️ **Color: Purple** - Set color label to purple
 - ▶️ **Color: None** - Remove color label
 
+### Presets
+- ▶️ **Get Preset IDs** - Retrieve all available preset IDs and names from Lightroom and save to JSON file
+- ▶️ **Apply Preset** - Apply a Lightroom preset to the current photo from dropdown list
+
+> **Usage:** First run "Get Preset IDs" to retrieve and cache all available presets. Then use "Apply Preset" to select and apply any preset from the dropdown. The preset list is automatically sorted alphabetically by name.
+
 ### General
 - ▶️ **Set Value** - Set any Lightroom parameter to a specific value via dropdown selection
 - ▶️ **Configure Connection** - Set WebSocket host and port
@@ -214,12 +220,23 @@ For issues, questions, or contributions, please open an issue on the project rep
 
 ## Version History
 
+### v1.2.0
+- **New Feature**: Apply Preset command with dropdown selection
+- **New Feature**: Preset caching system with JSON storage
+- Enhanced preset management workflow
+- Improved preset retrieval with nested array parsing
+- Camera icon for Apply Preset action
+- Alphabetically sorted preset list (395+ presets supported)
+- Enhanced error handling and logging for preset operations
+- Updated documentation with preset usage instructions
+
 ### v1.0.0
 - Initial release
-- 40 actions across 9 categories
+- 41 actions across 10 categories
 - Full WebSocket communication with Lightroom
 - Configurable adjustment step values
 - Connection configuration UI
 - Complete action icon set
 - Color label support (requires Lightroom CC 9.0+)
+- Preset ID retrieval for future preset management
 

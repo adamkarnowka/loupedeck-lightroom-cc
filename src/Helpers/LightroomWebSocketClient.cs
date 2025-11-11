@@ -189,6 +189,39 @@ namespace Loupedeck.LightroomPlugin
             }
         }
 
+        public async Task<String> SendCommandWithResponseAsync(String command, Object[] parameters = null)
+        {
+            try
+            {
+                await EnsureConnectedAsync();
+
+                var requestId = Guid.NewGuid().ToString();
+                var messageObj = new
+                {
+                    requestId = requestId,
+                    @object = (String)null,
+                    message = command,
+                    @params = parameters ?? new Object[] { }
+                };
+
+                var json = JsonSerializer.Serialize(messageObj);
+                var buffer = Encoding.UTF8.GetBytes(json);
+                await this._webSocket.SendAsync(new ArraySegment<Byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+
+                var responseBuffer = new Byte[16384];
+                var result = await this._webSocket.ReceiveAsync(new ArraySegment<Byte>(responseBuffer), CancellationToken.None);
+                var responseJson = Encoding.UTF8.GetString(responseBuffer, 0, result.Count);
+
+                return responseJson;
+            }
+            catch (Exception ex)
+            {
+                PluginLog.Error($"Error sending command {command} with response: {ex.Message}");
+                this._isRegistered = false;
+                return null;
+            }
+        }
+
         public async Task SetValueAsync(String parameter, Int32 value)
         {
             try
