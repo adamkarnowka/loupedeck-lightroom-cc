@@ -1,13 +1,17 @@
 # Lightroom Loupedeck Plugin
 
+```
+📢 This plugin is for Adobe Lightroom CC - not Lightroom Classic or any other version!
+```
+
 A comprehensive Loupedeck plugin for Adobe Lightroom that provides direct control over photo adjustments, ratings, and workflow operations via WebSocket communication.
 I did this mostly for personal purposes, decided to share - maybe someone will find it useful.
 
-📢 This plugin is for Adobe Lightroom CC - not Lightroom Classic or any other version!
-
 ![Supported Lightroom Version](docs/images/lightroom-version-support.png)
 
-⚠️ I have tested it on Mac only, don't have option to try it using Windows - if you manage to make it work there, please let me know.
+```
+⚠️ I have tested it on Mac only, don't have option to try it using Windows.
+```
 
 ## Requirements:
 Adobe Lightroom installed, with `Enable external controllers` setting enabled:
