@@ -13,6 +13,11 @@ I did this mostly for personal purposes, decided to share - maybe someone will f
 ⚠️ I have tested it on Mac only, don't have option to try it using Windows.
 ```
 
+### Known limitations:
+
+- adjustments (actions with configuration) cannot be grouped into folders, this is Logi API limitation, so only simple commands are groupped, rest is shown as a long list.
+- when choosing step value, number in preview is shown as integer by default, click on it to see decimal value - again, API limitation 🤷🏻
+  
 ## Requirements:
 Adobe Lightroom installed, with `Enable external controllers` setting enabled:
 
