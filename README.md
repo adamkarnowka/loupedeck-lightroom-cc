@@ -23,6 +23,12 @@ Adobe Lightroom installed, with `Enable external controllers` setting enabled:
 
 ![Enable External Controllers in Lightroom](docs/images/lightroom-enable-external-controllers.png)
 
+### Pairing the Plugin
+
+After installation, the plugin will need to pair with Lightroom:
+
+![Pairing with Lightroom](docs/images/pairing.png)
+
 After installing, there is a default profile with buttons and knobs assigned to actions, with some icons and labels.
 However, I feel that workflow is personal choice, so this is my favourite setup - for you it will probably be different so feel free to rearange.
 With implemented actions - you should be able to setup desidred flow - there are adjustments with configurable step (for micro movements). Setting value allows you to create shortcuts to reset values or setting at some desired level. There is not so many colorgrading options yet, but they will be added over time. 

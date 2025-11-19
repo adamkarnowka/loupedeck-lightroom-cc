@@ -1,5 +1,5 @@
 type: plugin4
-name: Lightroom
+name: Lightroom CC
 displayName: Lightroom CC
 description: Comprehensive Lightroom CC plugin with adjustments, presets, ratings, and workflow controls via WebSocket.
 pluginFileName: LightroomPlugin.dll
