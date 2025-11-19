@@ -9,7 +9,8 @@ I did this mostly for personal purposes, decided to share - maybe someone will f
 
 ## Demo
 
-https://github.com/user-attachments/assets/demo.mp4
+
+https://github.com/user-attachments/assets/b10d64fa-5e04-4b62-99f0-ec3fa25e6dc8
 
 > **Note:** If the video doesn't play, you can view it directly in the [docs/images](docs/images/demo.mp4) folder.
 
