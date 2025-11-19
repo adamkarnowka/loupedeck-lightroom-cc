@@ -7,6 +7,12 @@
 A comprehensive Loupedeck plugin for Adobe Lightroom that provides direct control over photo adjustments, ratings, and workflow operations via WebSocket communication.
 I did this mostly for personal purposes, decided to share - maybe someone will find it useful.
 
+## Demo
+
+https://github.com/user-attachments/assets/demo.mp4
+
+> **Note:** If the video doesn't play, you can view it directly in the [docs/images](docs/images/demo.mp4) folder.
+
 ![Supported Lightroom Version](docs/images/lightroom-version-support.png)
 
 ```
